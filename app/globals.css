@@ -50,7 +50,7 @@ header.solid{background:rgba(7,19,22,.82);backdrop-filter:blur(16px);border-colo
 .hero{min-height:100svh;padding:0;display:flex;align-items:flex-end;overflow:hidden}
 .hero-bg{position:absolute;inset:-6% 0 0 0;background-size:cover;background-position:center 40%;will-change:transform;animation:zoom 22s ease-out both}
 @keyframes zoom{from{transform:scale(1.14)}to{transform:scale(1)}}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,19,22,.55) 0%,rgba(7,19,22,.05) 30%,rgba(7,19,22,.55) 62%,var(--ink) 100%)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,19,22,.3) 0%,rgba(7,19,22,0) 25%,rgba(7,19,22,.25) 62%,var(--ink) 100%)}
 .hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:44px;padding-top:140px}
 .badge{display:inline-flex;align-items:center;gap:10px;padding:9px 16px 9px 10px;border-radius:999px;background:rgba(7,19,22,.5);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);font-size:14px;font-weight:500;margin-bottom:26px}
 .badge i{width:22px;height:22px;border-radius:50%;background:var(--aqua);display:grid;place-items:center;color:#02211f;font-style:normal;font-size:13px;font-weight:800}
@@ -302,8 +302,9 @@ footer{border-top:1px solid var(--line);padding:70px 0 110px}
 
   /* первый экран: верх отдаём фотографии, текст прижат к низу */
   .hero{min-height:100svh}
-  .hero-bg{inset:0;animation:none}
-  .hero:after{background:linear-gradient(180deg,rgba(7,19,22,.86) 0%,rgba(7,19,22,.25) 17%,rgba(7,19,22,.05) 36%,rgba(7,19,22,.8) 60%,var(--ink) 94%)}
+  /* кадр крупнее экрана и сдвинут вверх: река оказывается над заголовком, а не под ним */
+  .hero-bg{inset:auto 0 auto 0;top:-55%;height:150%;animation:none}
+  .hero:after{background:linear-gradient(180deg,rgba(7,19,22,.55) 0%,rgba(7,19,22,0) 15%,rgba(7,19,22,0) 34%,rgba(7,19,22,.7) 52%,var(--ink) 80%)}
   .hero .wrap{padding-top:96px;padding-bottom:104px}
   .badge{font-size:13px;padding:7px 14px 7px 8px;margin-bottom:16px}
   .hero h1{font-size:clamp(34px,11.4vw,50px);line-height:.96}

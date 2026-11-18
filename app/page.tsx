@@ -31,8 +31,8 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-bg">
           {/* Горизонтальный кадр для широких экранов, вертикальный — для телефона. */}
-          <Image className="only-d" src="/img/hero.webp" alt="Сулакский каньон" fill priority sizes="100vw" style={{ objectFit: "cover", objectPosition: "center 40%" }} />
-          <Image className="only-m" src="/img/premium.webp" alt="Катер у плачущих скал в Сулакском каньоне" fill priority sizes="100vw" style={{ objectFit: "cover", objectPosition: "center 62%" }} />
+          <Image className="only-d" src="/img/hero-d.webp" alt="Сулакский каньон" fill priority sizes="100vw" style={{ objectFit: "cover", objectPosition: "center 55%" }} />
+          <Image className="only-m" src="/img/hero-m.webp" alt="Сулакский каньон" fill priority sizes="100vw" style={{ objectFit: "cover", objectPosition: "center" }} />
         </div>
         <div className="wrap">
           <div className="badge"><i>✓</i><span className="only-d">Федеральный туроператор · в реестре РТО {COMPANY.rto}</span><span className="only-m">Туроператор · РТО {COMPANY.rto}</span></div>

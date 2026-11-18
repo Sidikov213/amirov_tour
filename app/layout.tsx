@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { default: "Амиров-Тур — туры и экскурсии по Дагестану и Кавказу из Махачкалы", template: "%s | Амиров-Тур" },
   description: "Федеральный туроператор (РТО 024891). Однодневные экскурсии из Махачкалы и Каспийска от 3 500 ₽, многодневные и индивидуальные туры по Дагестану, Кавказу и за рубеж.",
-  openGraph: { type: "website", locale: "ru_RU", siteName: "Амиров-Тур", images: ["/img/hero.webp"] },
+  openGraph: { type: "website", locale: "ru_RU", siteName: "Амиров-Тур", images: ["/img/hero-d.webp"] },
   alternates: { canonical: "/" },
 };
 export const viewport: Viewport = { themeColor: "#071316" };
