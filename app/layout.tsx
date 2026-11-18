@@ -7,10 +7,12 @@ import "@fontsource/golos-text/latin-400.css";
 import "@fontsource/golos-text/latin-500.css";
 import "@fontsource/golos-text/latin-600.css";
 import "@fontsource/golos-text/latin-700.css";
-import "@fontsource/unbounded/cyrillic-600.css";
-import "@fontsource/unbounded/cyrillic-800.css";
-import "@fontsource/unbounded/latin-600.css";
-import "@fontsource/unbounded/latin-800.css";
+import "@fontsource/cormorant/cyrillic-600.css";
+import "@fontsource/cormorant/cyrillic-700.css";
+import "@fontsource/cormorant/cyrillic-600-italic.css";
+import "@fontsource/cormorant/latin-600.css";
+import "@fontsource/cormorant/latin-700.css";
+import "@fontsource/cormorant/latin-600-italic.css";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: { type: "website", locale: "ru_RU", siteName: "Амиров-Тур", images: ["/img/hero-d.webp"] },
   alternates: { canonical: "/" },
 };
-export const viewport: Viewport = { themeColor: "#071316" };
+export const viewport: Viewport = { themeColor: "#0c1a1c" };
 
 const jsonLd = {
   "@context": "https://schema.org", "@type": "TravelAgency", name: COMPANY.name, legalName: COMPANY.legal, url: SITE,

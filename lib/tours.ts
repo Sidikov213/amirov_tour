@@ -2,13 +2,14 @@ export type Region = "dag" | "che" | "kav";
 export type Tour = {
   slug: string; region: Region; img: string; hit: boolean; big: boolean;
   title: string; price: number; time: string; level: string; days: string;
-  about: string; departure: string; route: string[]; included: string[]; extra: string[];
+  about: string; departure: string; gallery: string[]; route: string[]; included: string[]; extra: string[];
 };
 
 // Данные взяты с действующего сайта amirov-tour.ru. Чтобы поменять цену или программу — правьте здесь.
 export const TOURS: Tour[] = [
   {
     "slug": "kanonpremium",
+    "gallery": ["/img/t/kanonpremium-1.webp", "/img/t/kanonpremium-2.webp"],
     "region": "dag",
     "img": "premium",
     "hit": true,
@@ -42,6 +43,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "sulakskijkanon",
+    "gallery": ["/img/t/sulakskijkanon-1.webp", "/img/t/sulakskijkanon-2.webp"],
     "region": "dag",
     "img": "sulak",
     "hit": false,
@@ -76,6 +78,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "derbent",
+    "gallery": ["/img/t/derbent-1.webp", "/img/t/derbent-2.webp"],
     "region": "dag",
     "img": "derbent",
     "hit": false,
@@ -110,6 +113,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "khunzakh",
+    "gallery": ["/img/t/khunzakh-1.webp", "/img/t/khunzakh-2.webp"],
     "region": "dag",
     "img": "khunzakh",
     "hit": false,
@@ -146,6 +150,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "kakhibgoor",
+    "gallery": ["/img/t/kakhibgoor-1.webp", "/img/t/kakhibgoor-2.webp"],
     "region": "dag",
     "img": "kahib",
     "hit": false,
@@ -180,6 +185,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "gunib",
+    "gallery": ["/img/t/gunib-1.webp", "/img/t/gunib-2.webp"],
     "region": "dag",
     "img": "gunib",
     "hit": false,
@@ -212,6 +218,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "korodaitesnina",
+    "gallery": ["/img/t/korodaitesnina-1.webp", "/img/t/korodaitesnina-2.webp"],
     "region": "dag",
     "img": "koroda",
     "hit": false,
@@ -243,6 +250,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "samurskiylesikhuchni",
+    "gallery": ["/img/t/samurskiylesikhuchni-1.webp", "/img/t/samurskiylesikhuchni-2.webp"],
     "region": "dag",
     "img": "samur",
     "hit": false,
@@ -273,6 +281,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "kubachi",
+    "gallery": [],
     "region": "dag",
     "img": "kubachi",
     "hit": false,
@@ -302,6 +311,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "harachi",
+    "gallery": ["/img/t/harachi-1.webp", "/img/t/harachi-2.webp"],
     "region": "dag",
     "img": "harachi",
     "hit": false,
@@ -335,6 +345,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "groznyy",
+    "gallery": ["/img/t/groznyy-1.webp", "/img/t/groznyy-2.webp"],
     "region": "che",
     "img": "grozny",
     "hit": false,
@@ -366,6 +377,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "kezenojam",
+    "gallery": ["/img/t/kezenojam-1.webp", "/img/t/kezenojam-2.webp"],
     "region": "che",
     "img": "kezenoy",
     "hit": false,
@@ -396,6 +408,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "benoi",
+    "gallery": ["/img/t/benoi-1.webp", "/img/t/benoi-2.webp"],
     "region": "che",
     "img": "benoi",
     "hit": false,
@@ -428,6 +441,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "osetiya",
+    "gallery": ["/img/t/osetiya-1.webp", "/img/t/osetiya-2.webp"],
     "region": "kav",
     "img": "osetia",
     "hit": false,
@@ -460,6 +474,7 @@ export const TOURS: Tour[] = [
   },
   {
     "slug": "ingushetiya",
+    "gallery": ["/img/t/ingushetiya-1.webp", "/img/t/ingushetiya-2.webp"],
     "region": "kav",
     "img": "ingush",
     "hit": false,

@@ -10,9 +10,9 @@ const NAV = [
 export function Logo() {
   return (
     <svg viewBox="0 0 40 40" fill="none" aria-hidden>
-      <circle cx="20" cy="20" r="19" stroke="#22d3c5" strokeWidth="1.5" />
-      <path d="M6 28 15 13l5 8 3-5 11 12" stroke="#f3ead9" strokeWidth="2.2" strokeLinejoin="round" strokeLinecap="round" />
-      <circle cx="28" cy="11" r="2.4" fill="#ffb347" />
+      <circle cx="20" cy="20" r="19" stroke="currentColor" strokeOpacity=".45" strokeWidth="1.5" />
+      <path d="M6 28 15 13l5 8 3-5 11 12" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" strokeLinecap="round" />
+      <circle cx="28" cy="11" r="2.6" fill="#c2613a" />
     </svg>
   );
 }

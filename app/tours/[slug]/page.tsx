@@ -59,6 +59,12 @@ export default async function TourPage({ params }: Props) {
               <div><span>Цена</span><b>{rub(t.price)}</b></div>
             </div>
 
+            {t.gallery.length > 0 && (
+              <div className="shots">
+                {t.gallery.map((src) => <Image key={src} src={src} alt={t.title} width={1200} height={900} sizes="(max-width:1020px) 50vw, 30vw" />)}
+              </div>
+            )}
+
             <h2 className="h4">Маршрут дня</h2>
             <ol className="stops">
               <li>Выезд<small>{t.departure}</small></li>
