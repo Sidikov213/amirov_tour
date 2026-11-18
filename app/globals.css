@@ -291,3 +291,39 @@ footer{border-top:1px solid var(--line);padding:70px 0 110px}
 .err{color:#b3261e;font-size:14px;margin-top:10px;text-align:center}
 .hp{position:absolute;left:-9999px;opacity:0}
 @media (max-width:1020px){.tcols{grid-template-columns:1fr}.side{position:static}.facts{grid-template-columns:1fr 1fr}}
+
+/* ---------- телефон: первый экран и лента экскурсий ---------- */
+.only-m{display:none!important}
+@media (max-width:640px){
+  .only-d{display:none!important}
+  .only-m{display:revert!important}
+  img.only-m{display:block!important}
+  .btn.only-m{display:inline-flex!important}
+
+  /* первый экран: верх отдаём фотографии, текст прижат к низу */
+  .hero{min-height:100svh}
+  .hero-bg{inset:0;animation:none}
+  .hero:after{background:linear-gradient(180deg,rgba(7,19,22,.86) 0%,rgba(7,19,22,.25) 17%,rgba(7,19,22,.05) 36%,rgba(7,19,22,.8) 60%,var(--ink) 94%)}
+  .hero .wrap{padding-top:96px;padding-bottom:104px}
+  .badge{font-size:13px;padding:7px 14px 7px 8px;margin-bottom:16px}
+  .hero h1{font-size:clamp(34px,11.4vw,50px);line-height:.96}
+  .hero h1 em{display:block;color:var(--aqua);-webkit-text-stroke:0;white-space:nowrap}
+  .hero p.sub{font-size:16px;margin-top:16px;max-width:320px;color:#d3e2e0}
+  .hero-cta{margin-top:22px;flex-direction:column;gap:10px}
+  .hero-cta .btn{width:100%;padding:17px 22px}
+  .hero-cta .btn-ghost{justify-content:space-between;font-weight:500;background:rgba(7,19,22,.45)}
+  .stats{display:flex;gap:26px;overflow-x:auto;margin:26px -16px 0;padding:0 16px;scrollbar-width:none}
+  .stats::-webkit-scrollbar{display:none}
+  .stat{flex:none}
+  .stat b{font-size:20px}
+  .stat span{font-size:12.5px;white-space:nowrap}
+
+  /* каталог: лента с прокруткой вместо пятнадцати карточек подряд */
+  .chips{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:0 16px;scrollbar-width:none;width:calc(100% + 32px)}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  #tours .grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 8px;scroll-padding-left:16px;scrollbar-width:none}
+  #tours .grid::-webkit-scrollbar{display:none}
+  #tours .card,#tours .card.big{flex:0 0 78vw;aspect-ratio:3/4;scroll-snap-align:start}
+  #tours .card h3,#tours .card.big h3{font-size:18px}
+}

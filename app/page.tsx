@@ -29,16 +29,22 @@ export default function Home() {
   return (
     <>
       <section className="hero" id="top">
-        <div className="hero-bg"><Image src="/img/hero.webp" alt="Сулакский каньон" fill priority sizes="100vw" style={{ objectFit: "cover", objectPosition: "center 40%" }} /></div>
+        <div className="hero-bg">
+          {/* Горизонтальный кадр для широких экранов, вертикальный — для телефона. */}
+          <Image className="only-d" src="/img/hero.webp" alt="Сулакский каньон" fill priority sizes="100vw" style={{ objectFit: "cover", objectPosition: "center 40%" }} />
+          <Image className="only-m" src="/img/premium.webp" alt="Катер у плачущих скал в Сулакском каньоне" fill priority sizes="100vw" style={{ objectFit: "cover", objectPosition: "center 62%" }} />
+        </div>
         <div className="wrap">
-          <div className="badge"><i>✓</i>Федеральный туроператор · в реестре РТО {COMPANY.rto}</div>
+          <div className="badge"><i>✓</i><span className="only-d">Федеральный туроператор · в реестре РТО {COMPANY.rto}</span><span className="only-m">Туроператор · РТО {COMPANY.rto}</span></div>
           <h1><span>Дагестан,</span><span>который <em>не забыть</em></span></h1>
-          <p className="sub">Экскурсии и туры из Махачкалы и Каспийска: Сулакский каньон, Дербент, Гуниб, горные аулы. Возим с 2017 года — с гидом, обедом и комфортным автобусом.</p>
+          <p className="sub only-d">Экскурсии и туры из Махачкалы и Каспийска: Сулакский каньон, Дербент, Гуниб, горные аулы. Возим с 2017 года — с гидом, обедом и комфортным автобусом.</p>
+          <p className="sub only-m">Экскурсии и туры из Махачкалы и Каспийска — с гидом, обедом и комфортным автобусом.</p>
           <div className="hero-cta">
             <a className="btn btn-primary" href="#tours">Выбрать экскурсию</a>
-            <a className="btn btn-ghost" href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noopener">Написать в WhatsApp</a>
+            <a className="btn btn-ghost only-d" href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noopener">Написать в WhatsApp</a>
+            <a className="btn btn-ghost only-m" href="#book">Куда и когда едем? <Arrow /></a>
           </div>
-          <Picker />
+          <div className="only-d"><Picker /></div>
           <div className="stats">
             <div className="stat"><b>с 2017</b><span>года возим туристов</span></div>
             <div className="stat"><b>15</b><span>экскурсий на один день</span></div>
